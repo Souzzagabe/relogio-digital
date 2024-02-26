@@ -7,15 +7,12 @@
 }
 
 body {
-    height: 100vh;
-    background-image: url(../image/243.jpeg);
+    height: 100dvh;
+    background-color: #c9d9f0;;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+
 }
 
 .relogio {
@@ -26,8 +23,6 @@ body {
     width: 550px;
     background-color: transparent;
     border-radius: 3px;
-    position: absolute;
-    top: 71%;
     bottom: 10px;
 }
 
@@ -52,4 +47,17 @@ body {
 
 .relogio span.tempo {
     font-size: 10px;
+}
+
+@media (max-width: 540px) {
+    .relogio {
+        flex-direction: column;
+        height: auto;
+        width: auto;
+    }
+
+    .relogio div {
+        margin-bottom: 20px;
+        width: 300px;
+    }
 }

@@ -1,20 +1,22 @@
-const horas = document.getElementById('horas')
-const minutos = document.getElementById('minutos')
-const segundos = document.getElementById('segundos')
+const horas = document.getElementById('horas');
+const minutos = document.getElementById('minutos');
+const segundos = document.getElementById('segundos');
 
-const relogio = setInterval(function time() {
-    let dateToday = new Date()
-    let hr = dateToday.getHours()
-    let min = dateToday.getMinutes()
-    let sec = dateToday.getSeconds()
+function obterTempoAtual() {
+  const dateToday = new Date();
+  const hr = String(dateToday.getHours()).padStart(2, '0');
+  const min = String(dateToday.getMinutes()).padStart(2, '0');
+  const sec = String(dateToday.getSeconds()).padStart(2, '0');
+  return { hr, min, sec };
+}
 
-    if (hr < 10) hr = '0' + hr
+function atualizarRelogio() {
+  const { hr, min, sec } = obterTempoAtual();
+  horas.textContent = hr;
+  minutos.textContent = min;
+  segundos.textContent = sec;
+}
 
-    if (min < 10) min = '0' + min
+atualizarRelogio();
 
-    if (sec < 10) sec = '0' + sec
-
-    horas.textContent = hr
-    minutos.textContent = min
-    segundos.textContent = sec
-})
+const relogio = setInterval(atualizarRelogio, 1000);
