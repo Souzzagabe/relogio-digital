@@ -8,7 +8,7 @@
 
 body {
     height: 100dvh;
-    background-color: #c9d9f0;;
+    background-color: #27272A;;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,9 +33,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: rgb(255, 173, 50);
-    background: rgb(0 0 0 / 78%);
-    box-shadow: 5px 5px 15px rgb(102 101 101 / 71%);
+    color: white;
+    background: #34D399;
+    box-shadow: 1px 1px 3px rgb(102 101 101 / 71%);
     border-radius: 32px;
     letter-spacing: 3px;
 }
